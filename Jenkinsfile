@@ -15,7 +15,7 @@ pipeline {
             remote.identityFile = identity
             stage("Enforce with Ansible") {
               sshCommand remote: remote, sudo: false, command: 'cd ./secops/ansible && git pull origin'
-              sshCommand remote: remote, sudo: false, command: 'cd ./secops/ansible && ansible-playbook -i inventories/local.host compliance.yaml -e devsec_hardening_target="nothing"'
+              sshCommand remote: remote, sudo: false, command: 'cd ./secops/ansible && echo ansible-playbook -i inventories/local.host compliance.yaml -e devsec_hardening_target="nothing"'
             }
             
             stage("Scan with InSpec") {
