@@ -1,0 +1,10 @@
+[lfs262]
+gke-cluster-1-default-pool-c7e15b04-88z9 ansible_ssh_host=34.32.193.61
+gke-cluster-1-default-pool-c7e15b04-gwh7 ansible_ssh_host=35.204.15.172
+gke-cluster-1-default-pool-c7e15b04-gxv6 ansible_ssh_host=35.204.97.242
+
+#[devsec_hardening_target:children]
+#lfs262
+
+[devsec_hardening_target]
+gke-cluster-1-default-pool-c7e15b04-88z9

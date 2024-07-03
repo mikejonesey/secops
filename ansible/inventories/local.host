@@ -1,3 +1,5 @@
 [local]
 localhost ansible_connection=local
 
+[devsec_hardening_target]
+localhost

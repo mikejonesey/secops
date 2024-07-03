@@ -1,4 +1,10 @@
-- hosts: localhost
+# usage... 
+# ansible-playbook -i inventories/... compliance.yaml -e devsec_hardening_target="group/host"
+# or... define a group in the inventory...
+# ansible-playbook -i inventories/... compliance.yaml
+
+- hosts: "{{ devsec_hardening_target | default('devsec_hardening_target') }}"
+  become: yes
   collections:
     - devsec.hardening
   roles:
